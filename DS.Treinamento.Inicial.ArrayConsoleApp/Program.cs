@@ -12,6 +12,7 @@ namespace DS.Treinamento.Inicial.ArrayConsoleApp
         {
             Console.WriteLine("Vamos cadastrar alguns clientes.");
             Cliente[] clientes = new Cliente[QUANTIDADE_MAXIMA];
+            int QuantosClientesCadastramos = 0;
 
             for (int i = 0; i < QUANTIDADE_MAXIMA; i++)
             {
@@ -38,6 +39,8 @@ namespace DS.Treinamento.Inicial.ArrayConsoleApp
                 // Cliente cliente = new Cliente() { Id = (i + 1), Nome = nome, DataDeNascimento = dataDeNascimento };
                 // clientes[i] = cliente;
 
+                QuantosClientesCadastramos++;
+
                 Console.WriteLine();
                 Console.Write("Continuar cadastro? (S/N)");
 
@@ -50,6 +53,17 @@ namespace DS.Treinamento.Inicial.ArrayConsoleApp
                 // string resposta = Console.ReadLine();
                 // if(resposta.Contains("n"...
             }
+
+            for (int i = 0; i < QuantosClientesCadastramos; i++)
+            {
+                Cliente clienteDaVez = clientes[i];
+                Console.WriteLine($"Olá, eu sou o/a {clienteDaVez.Nome}");
+            }
+
+            // repetir processo com WHILE
+            // repetir processo com DO-WHILE
+            // xingar a mãe/pai do/a instrutor/a
+            // repetir processo com FOREACH
         }
     }
 }
